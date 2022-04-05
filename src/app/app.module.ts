@@ -5,8 +5,10 @@ import { RouterModule } from '@angular/router';
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
+
 import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
+import { CreateEventComponent } from './events/create-event.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 
 import { EventService } from './events/shared/event.service';
@@ -20,6 +22,7 @@ import { appRoutes } from '../routes';
     NavBarComponent,
     EventsListComponent,
     EventThumbnailComponent,
+    CreateEventComponent,
     EventDetailsComponent
   ],
   providers: [
