@@ -9,8 +9,9 @@ import { Component, Input } from '@angular/core';
 
 			<div>Date: {{event?.date}}</div>
 
-	 		<div [ngSwitch]="event?.time">
+	 		<div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
 	 			Time: {{event?.time}}
+
 	 			<span *ngSwitchCase="'8:00 am'"> (Early start)</span>
 	 			<span *ngSwitchCase="'10:00 am'"> (Late start)</span>
 	 			<span *ngSwitchDefault> (Normal start)</span>
@@ -29,10 +30,18 @@ import { Component, Input } from '@angular/core';
  		</div>
   `,
   styles: [ `
-  	.thumbnail { min-height:210px }
+  	.bold { font-weight:bold !important; }
+  	.green { color:green !important; }
+  	.thumbnail { min-height:210px; }
 	`]
 })
 
 export class EventThumbnailComponent {
 	@Input() event:any
+
+	getStartTimeClass(){
+		if (this.event && this.event?.time === '8:00 am')
+			return ['green bold']
+		return []
+	}
 }
