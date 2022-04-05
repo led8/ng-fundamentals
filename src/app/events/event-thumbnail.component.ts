@@ -18,7 +18,10 @@ import { Component, Input } from '@angular/core';
 	 		</div>
 
  		</div>
-  `
+  `,
+  styles: [ `
+  	.thumbnail { min-height:210px }
+	`]
 })
 
 export class EventThumbnailComponent {
