@@ -11,6 +11,7 @@ import {
   EventThumbnailComponent,
   CreateEventComponent,
   EventDetailsComponent,
+  CreateSessionComponent,
   EventService,
   ToastrService,
   EventsListResolver,
@@ -27,7 +28,8 @@ import { appRoutes } from '../routes'
     EventsListComponent,
     EventThumbnailComponent,
     CreateEventComponent,
-    EventDetailsComponent
+    CreateSessionComponent,
+    EventDetailsComponent,
   ],
   providers: [
     EventService,
