@@ -15,10 +15,7 @@ import { Router } from '@angular/router';
 			<button type="submit" class="btn btn-primary mr-5">Save</button>
 			<button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
 		</div>
-	`,
-	styles: [`
-		.mr-5 { margin-right: 5px; }
-	`]
+	`
 })
 
 export class CreateEventComponent {

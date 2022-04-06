@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { RouterModule } from '@angular/router'
 
-import { EventsAppComponent } from './events-app.component';
-import { NavBarComponent } from './nav/navbar.component';
+import { EventsAppComponent } from './events-app.component'
+import { NavBarComponent } from './nav/navbar.component'
 
 import {
   EventsListComponent,
@@ -13,9 +13,9 @@ import {
   EventService,
   ToastrService,
   EventsListResolver,
-} from './events/index';
+} from './events/index'
 
-import { appRoutes } from '../routes';
+import { appRoutes } from '../routes'
 
 @NgModule({
   declarations: [

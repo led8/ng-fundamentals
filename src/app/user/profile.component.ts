@@ -11,10 +11,7 @@ import { Component } from '@angular/core'
       <button type="submit" class="btn btn-primary mr-5">Save</button>
       <button type="button" class="btn btn-default">Cancel</button>
     </div>
-  `,
-	styles: [`
-		.mr-5 { margin-right: 5px; }
-	`]
+  `
 })
 export class ProfileComponent {
        

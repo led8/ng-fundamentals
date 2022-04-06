@@ -8,6 +8,10 @@
   padding-top: 10px;
 }
 
+.mr-5 {
+  margin-right: 5px;
+}
+
 .pointable {
   cursor: pointer;
 }
