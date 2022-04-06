@@ -12,13 +12,18 @@ import { Router } from '@angular/router';
 			<br>
 			<br>
 
-			<button type="submit" class="btn btn-primary">Save</button>
+			<button type="submit" class="btn btn-primary mr-5">Save</button>
 			<button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
 		</div>
-	`
+	`,
+	styles: [`
+		.mr-5 { margin-right: 5px; }
+	`]
 })
 
 export class CreateEventComponent {
+	isDirty:boolean = true
+	
 	constructor(private router:Router){}
 
 	cancel(){
