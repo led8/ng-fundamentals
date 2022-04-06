@@ -12,6 +12,7 @@ import {
   CreateEventComponent,
   EventDetailsComponent,
   CreateSessionComponent,
+  SessionsListComponent,
   EventService,
   ToastrService,
   EventsListResolver,
@@ -29,6 +30,7 @@ import { appRoutes } from '../routes'
     EventThumbnailComponent,
     CreateEventComponent,
     CreateSessionComponent,
+    SessionsListComponent,
     EventDetailsComponent,
   ],
   providers: [
