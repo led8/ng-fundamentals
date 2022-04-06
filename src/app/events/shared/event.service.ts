@@ -5,6 +5,8 @@ import { IEvent } from './event.model';
 
 @Injectable()
 export class EventService {
+  event:IEvent
+
 	getEvents():Observable<IEvent[]> {
 		let subject = new Subject<IEvent[]>()
     setTimeout(() => { subject.next(EVENTS); subject.complete(); }, 100)
@@ -13,6 +15,26 @@ export class EventService {
 
   getEvent(id):IEvent {
     return EVENTS.find(event => event.id === parseInt(id) )
+  }
+
+  saveEvent(formValues){
+    this.event = {
+      id: 999,
+      name: formValues.name,
+      date: formValues.date,
+      time: formValues.time,
+      price: formValues.price,
+      imageUrl: formValues.imageUrl,
+      location: {
+        address: formValues.location.address,
+        city: formValues.location.city,
+        country: formValues.location.country,
+      },
+      onlineUrl: formValues.onlineUrl,
+      sessions:[]
+    }
+
+    EVENTS.push(this.event)
   }
 }
 
