@@ -13,6 +13,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 
 import { EventService } from './events/shared/event.service';
 import { ToastrService } from './events/common/toastr.service';
+import { EventsListResolver } from './events/events-list-resolver.service';
 
 import { appRoutes } from '../routes';
 
@@ -28,6 +29,7 @@ import { appRoutes } from '../routes';
   providers: [
     EventService,
     ToastrService,
+    EventsListResolver,
     {
       provide: "canDeactivateCreateEvent", 
       useValue: checkDirtyState
