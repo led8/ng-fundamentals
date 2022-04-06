@@ -10,5 +10,10 @@ export const appRoutes:Routes = [
 	{ path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
 	{ path: 'events', component: EventsListComponent, resolve: { events:EventsListResolver } },
 	{ path: 'events/:id', component: EventDetailsComponent },
-	{ path: '', redirectTo: '/events', pathMatch: 'full' }
+	{ path: '', redirectTo: '/events', pathMatch: 'full' },
+
+	{ 
+		path: 'user', 
+		loadChildren: () => import('./app/user/user.module').then(m => m.UserModule) 
+	}
 ]
