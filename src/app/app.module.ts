@@ -15,6 +15,8 @@ import {
   EventsListResolver,
 } from './events/index'
 
+import { AuthService } from './user/auth.service'
+
 import { appRoutes } from '../routes'
 
 @NgModule({
@@ -30,6 +32,7 @@ import { appRoutes } from '../routes'
     EventService,
     ToastrService,
     EventsListResolver,
+    AuthService,
     {
       provide: "canDeactivateCreateEvent", 
       useValue: checkDirtyState
@@ -41,6 +44,7 @@ import { appRoutes } from '../routes'
   ],
   bootstrap: [EventsAppComponent]
 })
+
 export class AppModule { }
 
 export function checkDirtyState(component:CreateEventComponent){
