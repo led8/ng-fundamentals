@@ -6,7 +6,7 @@ import { IUser } from './user.model'
 export class AuthService {
 	currentUser:IUser
 
-	longinUser(userName:string, userPassword:string){
+	longinUser(userName:string, password:string){
 		this.currentUser = {
 			id:1,
 			userName: userName,
