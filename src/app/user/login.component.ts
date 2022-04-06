@@ -7,7 +7,7 @@ import { AuthService } from './auth.service'
 @Component({
   templateUrl: './login.component.html',
   styles: [`
-  	em { color: red; margin-left: 150px; }
+  	em { float:right; color:red; padding-left: 10px }
   `]
 })
 
