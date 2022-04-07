@@ -17,7 +17,7 @@ export class EventService {
 	}
 
   getEvent(id):IEvent {
-    return EVENTS.find(event => event.id === parseInt(id) )
+    return EVENTS.find(event => event.id === id )
   }
 
   saveEvent(formValues){
