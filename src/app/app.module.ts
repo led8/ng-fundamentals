@@ -14,8 +14,11 @@ import {
   CreateSessionComponent,
   SessionsListComponent,
   CollapsibleWellComponent,
+  SimpleModalComponent,
   EventService,
   TOASTR_TOKEN,
+  JQ_TOKEN,
+  ModalTriggerDirective,
   Toastr,
   EventsListResolver,
   DurationPipe,
@@ -25,7 +28,8 @@ import { AuthService } from './user/auth.service'
 
 import { appRoutes } from '../routes'
 
-declare let toastr:Toastr
+let toastr:Toastr = window['toastr']
+let jQuery = window['$']
 
 @NgModule({
   declarations: [
@@ -38,13 +42,19 @@ declare let toastr:Toastr
     SessionsListComponent,
     EventDetailsComponent,
     CollapsibleWellComponent,
+    SimpleModalComponent,
     DurationPipe,
+    ModalTriggerDirective,
   ],
   providers: [
     EventService,
     {
       provide: TOASTR_TOKEN,
       useValue: toastr
+    },
+    {
+      provide: JQ_TOKEN,
+      useValue: jQuery
     },
     EventsListResolver,
     AuthService,

@@ -42,7 +42,8 @@ export class CreateSessionComponent implements OnInit {
 			duration: +formValues.duration,
 			level: formValues.level,
 			abstract: formValues.abstract,
-			voters: []
+			voters: [],
+			eventId:undefined
 		}
 
 		this.saveNewSession.emit(session)
