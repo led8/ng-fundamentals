@@ -9,7 +9,7 @@ import { IEvent } from './shared/event.model';
 
 	 		<h2>{{event?.name}}</h2>
 
-			<div>Date: {{event?.date}}</div>
+			<div>Date: {{event?.date | date}}</div>
 
 	 		<div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
 	 			Time: {{event?.time}}
@@ -19,7 +19,7 @@ import { IEvent } from './shared/event.model';
 	 			<span *ngSwitchDefault> (Normal start)</span>
 	 		</div>
 
-	 		<div>Price: {{event?.price}}$</div>
+	 		<div>Price: {{event?.price | currency:'USD'}}</div>
 
 			<div *ngIf event?.location>
 	 			<span>Location: {{event?.location?.address}}</span>
