@@ -15,7 +15,8 @@ import {
   SessionsListComponent,
   CollapsibleWellComponent,
   EventService,
-  ToastrService,
+  TOASTR_TOKEN,
+  Toastr,
   EventsListResolver,
   DurationPipe,
 } from './events/index'
@@ -23,6 +24,8 @@ import {
 import { AuthService } from './user/auth.service'
 
 import { appRoutes } from '../routes'
+
+declare let toastr:Toastr
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { appRoutes } from '../routes'
   ],
   providers: [
     EventService,
-    ToastrService,
+    {
+      provide: TOASTR_TOKEN,
+      useValue: toastr
+    },
     EventsListResolver,
     AuthService,
     {
