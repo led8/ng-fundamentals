@@ -17,6 +17,7 @@ import {
   EventService,
   ToastrService,
   EventsListResolver,
+  DurationPipe,
 } from './events/index'
 
 import { AuthService } from './user/auth.service'
@@ -34,6 +35,7 @@ import { appRoutes } from '../routes'
     SessionsListComponent,
     EventDetailsComponent,
     CollapsibleWellComponent,
+    DurationPipe,
   ],
   providers: [
     EventService,
