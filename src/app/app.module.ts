@@ -15,6 +15,8 @@ import {
   SessionsListComponent,
   CollapsibleWellComponent,
   SimpleModalComponent,
+  UpvoteComponent,
+  VoterService,
   EventService,
   TOASTR_TOKEN,
   JQ_TOKEN,
@@ -43,6 +45,7 @@ let jQuery = window['$']
     EventDetailsComponent,
     CollapsibleWellComponent,
     SimpleModalComponent,
+    UpvoteComponent,
     DurationPipe,
     ModalTriggerDirective,
   ],
@@ -58,6 +61,7 @@ let jQuery = window['$']
     },
     EventsListResolver,
     AuthService,
+    VoterService,
     {
       provide: "canDeactivateCreateEvent", 
       useValue: checkDirtyState
